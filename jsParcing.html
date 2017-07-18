@@ -9,7 +9,7 @@
 		function getValue()
 		{
 			$.ajax({
-				url: 'https://m.avito.ru/i80652052/ekaterinburg/zapchasti_i_aksessuary?p=2&q=ремкомплект',
+				url: 'https://cors-anywhere.herokuapp.com/m.avito.ru/i80652052/ekaterinburg/zapchasti_i_aksessuary?p=2&q=ремкомплект',
 				headers: {'X-Requested-With': 'XMLHttpRequest'},
 				success: function (response, status, jqHRXobject) {
 					$('.start').append(response);
