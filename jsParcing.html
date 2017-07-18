@@ -11,8 +11,9 @@
 			$.ajax({
 				url: 'https://cors-anywhere.herokuapp.com/m.avito.ru/i80652052/ekaterinburg/zapchasti_i_aksessuary?p=2&q=ремкомплект',
 				headers: {'X-Requested-With': 'XMLHttpRequest'},
+				dataType: 'html',
 				success: function (response, status, jqHRXobject) {
-					$('.start').append($(response).filter('.b-item js-catalog-item-enum '));
+					$('.start').append(jQuery.parseHTML(jQuery.trim(response)));
           // $('.start').append($('article.b-item js-catalog-item-enum '));
 				}
 				});
