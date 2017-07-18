@@ -13,7 +13,10 @@
 				headers: {'X-Requested-With': 'XMLHttpRequest'},
 				dataType: 'html',
 				success: function (response, status, jqHRXobject) {
-					$('.start').append(jQuery.parseHTML(jQuery.trim(response)).filter('.b-item js-catalog-item-enum '));
+					var txt = jQuery.trim(response);
+					var dom = jQuery.parseHTML(txt);
+					var filtered = $(dom).filter('.b-item js-catalog-item-enum ');
+					$('.start').append(filtered);
           // $('.start').append($('article.b-item js-catalog-item-enum '));
 				}
 				});
