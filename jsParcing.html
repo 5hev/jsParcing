@@ -14,8 +14,9 @@
 				dataType: 'html',
 				success: function (response, status, jqHRXobject) {
 					$('.start').append($(response));
-					//var filtered = $('.start').filter('.b-item js-catalog-item-enum ');
-					//$('.start').html(filtered);
+					var filtered = $('.start').filter('item_table-header');
+					$('.start').empty();
+					$('.start').html(filtered);
 				}
 				});
 		};
