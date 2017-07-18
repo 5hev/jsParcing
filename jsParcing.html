@@ -18,7 +18,7 @@
 				headers: {'X-Requested-With': 'XMLHttpRequest'},
 				dataType: 'html',
 				success: function (response, status, jqHRXobject) {
-					$('.start').append($(response));
+					$('.input').append($(response));
 					var filtered = $('.item_table-header a');
 					
 					filtered.each(
