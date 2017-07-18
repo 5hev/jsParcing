@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 		<style>
-			input {
+			.input {
 				display: none;
 			}
 		</style>
@@ -23,7 +23,7 @@
 					
 					filtered.each(
 						function(el) {
-							$('output').append("> " + el.attr('href') + "; " + el.text());
+							console.log("> " + el.attr('href') + "; " + el.text());
 						}
 					);
 					//$('.start').empty();
