@@ -14,9 +14,9 @@
 				dataType: 'html',
 				success: function (response, status, jqHRXobject) {
 					$('.start').append($(response));
-					var filtered = $('.start').filter('item_table-header');
-					$('.start').empty();
-					$('.start').text(filtered[0].text());
+					var filtered = $('.item_table-header');
+					//$('.start').empty();
+					//$('.start').text(filtered[0].text());
 				}
 				});
 		};
