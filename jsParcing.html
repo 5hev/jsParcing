@@ -5,6 +5,11 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<style>
+			input {
+				display: none;
+			}
+		</style>
 		<script type="text/javascript">
 		function getValue()
 		{
@@ -14,7 +19,13 @@
 				dataType: 'html',
 				success: function (response, status, jqHRXobject) {
 					$('.start').append($(response));
-					var filtered = $('.item_table-header');
+					var filtered = $('.item_table-header > a');
+					
+					filtered.each(
+						function(el) {
+							$('output').append("> " + el.attr('href') + "; " + el.text());
+						}
+					);
 					//$('.start').empty();
 					//$('.start').text(filtered[0].text());
 				}
@@ -27,7 +38,8 @@
 		</script>
 	</head>
 	<body>
-	<div class="start"></div>
+	<div class="input"></div>
+	<div class="output"></div>
 	<script type="text/javascript">
 		// $( ".start" ).click(function() { $(".form").toggle(1000); });
 		// $( "#url" ).blur(function() { Cookies.set('url', $("#url").val(), { expires: 7 }) });
